@@ -25,7 +25,7 @@ html::before, html::after, body::before, body::after {
 }
 
 html::after {
-   background-image: url("/img/pix.png");
+   background-image: url("pix.png");
    z-index: 1;
    animation: pix 0.3s linear infinite;
 }
@@ -39,9 +39,9 @@ body::after {
 }
 
 /* --- 'keyframes --- */
-/* @keyframes pix { to { background-position: 0 3px; }}
+@keyframes pix { to { background-position: 0 3px; }}
 @keyframes bgjournal { to { background-position: 0 -120px; }}
-@keyframes fgjournal { to { background-position: -70px 0; }} */
+@keyframes fgjournal { to { background-position: -70px 0; }}
 
 /* --- 'journal --- */
 .journal::before {
