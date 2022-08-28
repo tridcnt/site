@@ -1,0 +1,66 @@
+:root {
+   --journal: 210;
+
+   --bggallery: url("https://64.media.tumblr.com/bb56a59ce6a0c0c52c094bff10dec793/tumblr_oln48wfLrz1v5lzv2o5_r1_1280.gifv");
+}
+
+* {
+   scrollbar-width: none;
+   box-sizing: border-box;
+}
+
+/* --- 'canvas --- */
+body {
+   margin: 0;
+   background-attachment: fixed;
+   cursor: cell;
+}
+
+html::before, html::after, body::before, body::after {
+   content: '';
+   position: fixed;
+   inset: 0;
+   z-index: -1;
+   pointer-events: none;
+}
+
+html::after {
+   background-image: url("/img/pix.png");
+   z-index: 1;
+   animation: pix 0.3s linear infinite;
+}
+
+body, body::after {
+   background-size: cover;
+}
+
+body::after {
+   filter: blur(4px);
+}
+
+/* --- 'keyframes --- */
+/* @keyframes pix { to { background-position: 0 3px; }}
+@keyframes bgjournal { to { background-position: 0 -120px; }}
+@keyframes fgjournal { to { background-position: -70px 0; }} */
+
+/* --- 'journal --- */
+.journal::before {
+   margin-left: -2px;
+   background-image: linear-gradient(to right, hsl(var(--journal), 50%, 20%) 2px, transparent 2px), linear-gradient(to bottom, hsl(var(--journal), 50%, 20%) 2px, transparent 2px);
+   background-size: 120px 120px;
+   animation: bgjournal 2s linear infinite;
+}
+
+.journal::after {
+   margin-top: -2px;
+   background-image: linear-gradient(to right, hsl(var(--journal), 80%, 60%) 2px, transparent 2px), linear-gradient(to bottom, hsl(var(--journal), 80%, 60%) 2px, transparent 2px);
+   background-size: 70px 70px;
+   filter: unset;
+   animation: fgjournal 3s linear infinite;
+}
+
+/* --- 'gallery --- */
+.gallery, .gallery::after {
+   background-image: var(--bggallery);
+   background-position: right;
+}

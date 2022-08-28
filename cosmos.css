@@ -1,0 +1,42 @@
+/* --- 'flex ---*/
+.journal {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+/* --- 'blog --- */
+.journal {
+   background-color: #000;
+   color: #fff;
+   text-align: center;
+}
+
+.journal h1 {
+   color: hsl(var(--journal), 50%, 70%);
+   font-weight: normal;
+}
+
+.journal h1, h2 {
+   margin: 5px;
+}
+
+hr {
+   margin: 25px -20px;
+}
+
+.journal header, .journal article {
+   width: 55%;
+   padding: 20px;
+   border: 1px solid hsl(var(--journal), 50%, 30%);
+   background-color: #0d0d0d;
+}
+
+.journal header {
+   margin: 35px 0;
+   height: fit-content;
+}
+
+.journal article {
+   margin: 15px 0;
+}
